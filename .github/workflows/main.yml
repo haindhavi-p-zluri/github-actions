@@ -2,7 +2,7 @@
 name: deploy-lambda
 env:
   S3_BUCKET_NAME                      : "github-actions-lambda"
-  DEPLOY_PACKAGE_NAME                 : "github-actions-lambda_$(date +%Y%m%d).zip"
+  DEPLOY_PACKAGE_NAME                 : "github-actions-lambda.zip"
   AWS_REGION_NAME                     : "us-east-1"
   RUNNER_PYTHON_VERSION               : "3.8"
   PYTHON_ENV                          : "python3.8"
