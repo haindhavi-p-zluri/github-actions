@@ -76,7 +76,7 @@ jobs:
           aws lambda update-function-code \
           --function-name ${{ matrix.functions }} \
           --s3-bucket ${{ env.S3_BUCKET_NAME }} \
-          --s3-key ${{ env.DE_DEPLOY_PACKAGE_NAME}}
+          --s3-key ${{ env.DEPLOY_PACKAGE_NAME}}
 
       - name: Runner clean workspace path
         run: |
