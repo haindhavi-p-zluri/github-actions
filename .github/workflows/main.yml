@@ -31,9 +31,14 @@ jobs:
           aws-region            : ${{ env.AWS_REGION_NAME }}
 
       - name: create DE deployment package
-        uses: montudor/action-zip@v1
+      - uses: actions/checkout@v2
+      - name: zip
+        uses: montudor/action-zip@v0.1.0
         with:
-          args:  zip -qq -r bundle.zip . -i github-actions/
+          args: "zip -r ./bundle.zip ./."
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bundle.zip
 
       - name: default deploy
         uses: appleboy/lambda-action@master
