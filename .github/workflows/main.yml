@@ -33,7 +33,7 @@ jobs:
       - name: create DE deployment package
         uses: montudor/action-zip@v1
         with: 
-          args:  zip -qq -r ${{ env.DE_DEPLOY_PACKAGE_NAME }} ./  -x  *.git*
+          args:  zip -qq -r ${{ env.DEPLOY_PACKAGE_NAME }} ./  -x  *.git*
           
           
       - name: deploy  DE lambda
