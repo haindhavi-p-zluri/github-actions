@@ -33,14 +33,16 @@ jobs:
       - name: create DE deployment package
         uses: montudor/action-zip@v1
         with: 
-          args:  zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./  -x  *.git* dir
+          args: zip -r ./bundle.zip ./.
           
           
       - name: deploy  DE lambda
         run: |
           aws lambda update-function-code \
           --function-name "github-actions-on-lambda" \
-          --zip-file ${{ env.DEPLOY_PACKAGE_NAME}}
+          --zip-file fileb://bundle.zip
+
+        
           
 
     
