@@ -31,9 +31,9 @@ jobs:
           aws-region            : ${{ env.AWS_REGION_NAME }}
 
       - name: create DE deployment package
-        uses: montudor/action-zip@v0.1.0
+        uses: montudor/action-zip@v1
         with:
-          args:  zip -r bundle.zip ./  -x  *.git*
+          args:  zip -qq -r bundle.zip ./  -x  *.git*
 
           
       - name: deploy  DE lambda
