@@ -33,7 +33,7 @@ jobs:
       - name: create DE deployment package
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -r ./bundle.zip . 
+          args: zip -r ./bundle.zip ./* 
           
       - name: deploy  DE lambda
         run: |
