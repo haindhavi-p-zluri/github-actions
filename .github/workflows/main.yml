@@ -47,13 +47,6 @@ jobs:
           function_name: github-actions-on-lambda    
           zip_file: bundle.zip
 
-  
-          
-      - name: deploy  DE lambda
-        run: |
-          aws lambda update-function-code \
-          --function-name "github-actions-on-lambda" \
-          --zip-file fileb://bundle.zip
 
         
           
