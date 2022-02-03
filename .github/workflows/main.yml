@@ -36,9 +36,7 @@ jobs:
         uses: montudor/action-zip@v0.1.0
         with:
           args: "zip -r ./bundle.zip ./."
-      - uses: actions/upload-artifact@v2
-        with:
-          name: bundle.zip
+   
 
       - name: default deploy
         uses: appleboy/lambda-action@master
